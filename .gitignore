@@ -1,0 +1,11 @@
+Project_group5/bin/Debug/Project_group5.exe
+Project_group5/bin/Debug/Project_group5.pdb
+Project_group5/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+Project_group5/obj/Debug/Project_group5.csproj.CoreCompileInputs.cache
+Project_group5/obj/Debug/Project_group5.csproj.FileListAbsolute.txt
+Project_group5/obj/Debug/Project_group5.csproj.GenerateResource.cache
+Project_group5/obj/Debug/Project_group5.exe
+*.vsidx
+*.cache
+*.suo
+.vs/*

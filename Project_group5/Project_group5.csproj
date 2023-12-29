@@ -1,0 +1,705 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D978CEB1-C719-4CC9-875D-C718C81DB83B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Project_group5</RootNamespace>
+    <AssemblyName>Project_group5</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ComponentFactory.Krypton.Toolkit">
+      <HintPath>..\..\..\Krypton Toolkit\Krypton-master\Bin\ComponentFactory.Krypton.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.Desktop.v22.2, Version=22.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v22.2, Version=22.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Drawing.v22.2, Version=22.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v22.2.Core, Version=22.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Sparkline.v22.2.Core, Version=22.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v22.2, Version=22.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v22.2, Version=22.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="Guna.UI2, Version=2.0.4.4, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.4\lib\net48\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BuoiHoc_Lop.cs" />
+    <Compile Include="Combobox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FormChild.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormChild.Designer.cs">
+      <DependentUpon>FormChild.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDangKy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDangKy.Designer.cs">
+      <DependentUpon>FrmDangKy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTrangChu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FrmTrangChu.Designer.cs">
+      <DependentUpon>FrmTrangChu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GV\FrmGV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GV\FrmGV.Designer.cs">
+      <DependentUpon>FrmGV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GV\FrmGV_ThongTin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GV\FrmGV_ThongTin.Designer.cs">
+      <DependentUpon>FrmGV_ThongTin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GV\FrmGV_TKB.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GV\FrmGV_TKB.Designer.cs">
+      <DependentUpon>FrmGV_TKB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GV\FrmGV_XemDiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GV\FrmGV_XemDiem.Designer.cs">
+      <DependentUpon>FrmGV_XemDiem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HienThiTen.cs" />
+    <Compile Include="HV\FrmHV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HV\FrmHV.Designer.cs">
+      <DependentUpon>FrmHV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HV\FrmHV_DanhGia.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HV\FrmHV_DanhGia.Designer.cs">
+      <DependentUpon>FrmHV_DanhGia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HV\FrmHV_KQHT.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HV\FrmHV_KQHT.Designer.cs">
+      <DependentUpon>FrmHV_KQHT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HV\FrmHV_ThongTin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HV\FrmHV_ThongTin.Designer.cs">
+      <DependentUpon>FrmHV_ThongTin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HV\FrmHV_TKB.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HV\FrmHV_TKB.Designer.cs">
+      <DependentUpon>FrmHV_TKB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMessageBox.Designer.cs">
+      <DependentUpon>FrmMessageBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HV\UCBlank.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HV\UCBlank.Designer.cs">
+      <DependentUpon>UCBlank.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HV\UCNgay.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HV\UCNgay.Designer.cs">
+      <DependentUpon>UCNgay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HV\UC_Danhgia.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HV\UC_Danhgia.Designer.cs">
+      <DependentUpon>UC_Danhgia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HV\UC_Lich.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HV\UC_Lich.Designer.cs">
+      <DependentUpon>UC_Lich.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HV\UC_TB.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HV\UC_TB.Designer.cs">
+      <DependentUpon>UC_TB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HV\FrmHV_BaiKiemTra.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HV\FrmHV_BaiKiemTra.Designer.cs">
+      <DependentUpon>FrmHV_BaiKiemTra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GV\FrmGV_ThongBao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GV\FrmGV_ThongBao.Designer.cs">
+      <DependentUpon>FrmGV_ThongBao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QTV\BieuDoDiem_HV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QTV\BieuDoDiem_HV.Designer.cs">
+      <DependentUpon>BieuDoDiem_HV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QTV\BieuDoSoSanh_Lop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QTV\BieuDoSoSanh_Lop.Designer.cs">
+      <DependentUpon>BieuDoSoSanh_Lop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QTV\FrmQTV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QTV\FrmQTV.Designer.cs">
+      <DependentUpon>FrmQTV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QTV\FrmQTV_GV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QTV\FrmQTV_GV.Designer.cs">
+      <DependentUpon>FrmQTV_GV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QTV\FrmQTV_HV.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="QTV\FrmQTV_HV.Designer.cs">
+      <DependentUpon>FrmQTV_HV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QTV\FrmQTV_KhoaHoc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="QTV\FrmQTV_KhoaHoc.Designer.cs">
+      <DependentUpon>FrmQTV_KhoaHoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QTV\FrmQTV_Lop.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="QTV\FrmQTV_Lop.Designer.cs">
+      <DependentUpon>FrmQTV_Lop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QTV\FrmQTV_TaiKhoan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="QTV\FrmQTV_TaiKhoan.Designer.cs">
+      <DependentUpon>FrmQTV_TaiKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GradientPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="HocVien.cs" />
+    <Compile Include="HV_DAO.cs" />
+    <Compile Include="KhoaHoc.cs" />
+    <Compile Include="KhoaHoc_DAO.cs" />
+    <Compile Include="LopHoc.cs" />
+    <Compile Include="LopHocDAO.cs" />
+    <Compile Include="RJButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DangNhapDAO.cs" />
+    <Compile Include="DataBaseConn.cs" />
+    <Compile Include="ExceptionEmail.cs" />
+    <Compile Include="ExceptionThongBao.cs" />
+    <Compile Include="FormDangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDangNhap.Designer.cs">
+      <DependentUpon>FormDangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDoiMK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDoiMK.Designer.cs">
+      <DependentUpon>FrmDoiMK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GV\FrmGV_ThemDeKT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GV\FrmGV_ThemDeKT.Designer.cs">
+      <DependentUpon>FrmGV_ThemDeKT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDeKiemTra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDeKiemTra.Designer.cs">
+      <DependentUpon>FrmDeKiemTra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GiangVien.cs" />
+    <Compile Include="GiangVienDAO.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QLDeKiemTra.cs" />
+    <Compile Include="QLFile.cs" />
+    <Compile Include="RJComboBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TaiKhoan.cs" />
+    <Compile Include="TaiKhoanDAO.cs" />
+    <Compile Include="HV\UCHV_kiemTra.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HV\UCHV_kiemTra.Designer.cs">
+      <DependentUpon>UCHV_kiemTra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HV\UC_TKB.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HV\UC_TKB.Designer.cs">
+      <DependentUpon>UC_TKB.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FormDangNhap.resx">
+      <DependentUpon>FormDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDangKy.resx">
+      <DependentUpon>FrmDangKy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDoiMK.resx">
+      <DependentUpon>FrmDoiMK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMessageBox.resx">
+      <DependentUpon>FrmMessageBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTrangChu.resx">
+      <DependentUpon>FrmTrangChu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GV\FrmGV.resx">
+      <DependentUpon>FrmGV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GV\FrmGV_ThongTin.resx">
+      <DependentUpon>FrmGV_ThongTin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GV\FrmGV_TKB.resx">
+      <DependentUpon>FrmGV_TKB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HV\FrmHV.resx">
+      <DependentUpon>FrmHV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HV\FrmHV_BaiKiemTra.resx">
+      <DependentUpon>FrmHV_BaiKiemTra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HV\FrmHV_DanhGia.resx">
+      <DependentUpon>FrmHV_DanhGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HV\FrmHV_KQHT.resx">
+      <DependentUpon>FrmHV_KQHT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HV\FrmHV_ThongTin.resx">
+      <DependentUpon>FrmHV_ThongTin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HV\FrmHV_TKB.resx">
+      <DependentUpon>FrmHV_TKB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HV\UCBlank.resx">
+      <DependentUpon>UCBlank.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HV\UCNgay.resx">
+      <DependentUpon>UCNgay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HV\UC_Danhgia.resx">
+      <DependentUpon>UC_Danhgia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HV\UC_Lich.resx">
+      <DependentUpon>UC_Lich.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HV\UC_TB.resx">
+      <DependentUpon>UC_TB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QTV\BieuDoDiem_HV.resx">
+      <DependentUpon>BieuDoDiem_HV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QTV\BieuDoSoSanh_Lop.resx">
+      <DependentUpon>BieuDoSoSanh_Lop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QTV\FrmQTV.resx">
+      <DependentUpon>FrmQTV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QTV\FrmQTV_GV.resx">
+      <DependentUpon>FrmQTV_GV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GV\FrmGV_ThemDeKT.resx">
+      <DependentUpon>FrmGV_ThemDeKT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GV\FrmGV_XemDiem.resx">
+      <DependentUpon>FrmGV_XemDiem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDeKiemTra.resx">
+      <DependentUpon>FrmDeKiemTra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GV\FrmGV_ThongBao.resx">
+      <DependentUpon>FrmGV_ThongBao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QTV\FrmQTV_HV.resx">
+      <DependentUpon>FrmQTV_HV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QTV\FrmQTV_KhoaHoc.resx">
+      <DependentUpon>FrmQTV_KhoaHoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QTV\FrmQTV_Lop.resx">
+      <DependentUpon>FrmQTV_Lop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QTV\FrmQTV_TaiKhoan.resx">
+      <DependentUpon>FrmQTV_TaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="HV\UCHV_kiemTra.resx">
+      <DependentUpon>UCHV_kiemTra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HV\UC_TKB.resx">
+      <DependentUpon>UC_TKB.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AnhDangNhap1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mesa de trabajo 1%404x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Artboard 2%404x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Artboard 3%404x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Artboard 3%404x1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\12%404x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Artboard 1%404x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Artboard 1%404x1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Artboard 1%404x2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Artboard 2%404x1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Artboard 2%404x2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Artboard 2%404x3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BGDN%404x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BGDN%404x1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BGDN%404x2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BGDN%404x3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BGHVTC%404x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BGHVTC%404x1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TPP.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nyan-cat.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\panel%404x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BGHVTC%404x2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profile.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Khung%404x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Khung%404x1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\biển%404x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\khung.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mesa de trabajo 1%404x1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mesa de trabajo 1%404x2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mesa de trabajo 1%404x3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mesa de trabajo 1%404x4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Artboard 1%404x3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BG1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\warning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Artboard 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Artboard 21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Artboard 22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\resume.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profile %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\schedule %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new-email.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\text.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\quiz %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\score.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\satisfaction.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\account.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Artboard 23.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Artboard 24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\account1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\account %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\phone-call.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\email.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sách .png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOGO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\award.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\award1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ảnh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\panel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\question.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\information.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\students.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\teacher.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\online-course.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\personal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\classroom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\google-plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dust.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\compose.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hidden.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blackboard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\updated.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\instruction.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\open-folder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\floppy-disk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lydo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TC1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TC2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GV.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LD.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LD1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LD2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LD3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Icon1.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
